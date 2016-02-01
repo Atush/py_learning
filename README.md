@@ -1,1 +1,1 @@
-# py_learning
+# Repository for Python learning
