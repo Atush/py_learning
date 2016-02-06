@@ -10,15 +10,16 @@ def is_alert_present(wd):
     except:
         return False
 
-class test_add_group(unittest.TestCase):
+class test2_add_group(unittest.TestCase):
     def setUp(self):
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
     
-    def test_test_add_group(self):
+    def test_test2_add_group(self):
         success = True
         wd = self.wd
         wd.get("http://localhost/addressbook/index.php")
+        wd.find_element_by_id("content").click()
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys("admin")
@@ -31,16 +32,13 @@ class test_add_group(unittest.TestCase):
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
         wd.find_element_by_name("group_name").send_keys("test_group")
-        if not wd.find_element_by_xpath("//div[@id='content']//select[normalize-space(.)='[none]']//option[1]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']//select[normalize-space(.)='[none]']//option[1]").click()
         wd.find_element_by_name("group_header").click()
         wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys("test_header")
+        wd.find_element_by_name("group_header").send_keys("Header")
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys("test_footer")
+        wd.find_element_by_name("group_footer").send_keys("Footer")
         wd.find_element_by_name("submit").click()
-        wd.find_element_by_link_text("group page").click()
         wd.find_element_by_link_text("Logout").click()
         self.assertTrue(success)
     
