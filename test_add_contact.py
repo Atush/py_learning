@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from selenium.webdriver.firefox.webdriver import WebDriver
 import unittest
+from selenium.webdriver.support.ui import Select
 
 class test_add_contact(unittest.TestCase):
     def setUp(self):
@@ -10,7 +11,16 @@ class test_add_contact(unittest.TestCase):
         wd = self.wd
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
+        self.create_contact(wd)
+        self.logout(wd)
+
+    def logout(self, wd):
+        wd.find_element_by_link_text("Logout").click()
+
+    def create_contact(self, wd):
+        # go to create contact page
         wd.find_element_by_link_text("add new").click()
+        # fill contact form
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("Ivan")
@@ -23,11 +33,9 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("nickname").click()
         wd.find_element_by_name("nickname").clear()
         wd.find_element_by_name("nickname").send_keys("petya")
-        wd.find_element_by_name("photo").click()
-        wd.find_element_by_name("photo").click()
         wd.find_element_by_name("title").click()
         wd.find_element_by_name("title").clear()
-        wd.find_element_by_name("title").send_keys("testing2")
+        wd.find_element_by_name("title").send_keys("testing3")
         wd.find_element_by_name("company").click()
         wd.find_element_by_name("company").clear()
         wd.find_element_by_name("company").send_keys("gasprom")
@@ -60,19 +68,13 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("homepage").click()
         wd.find_element_by_name("homepage").clear()
         wd.find_element_by_name("homepage").send_keys("index.ru")
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[14]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[14]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[12]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[12]").click()
+        Select(wd.find_element_by_name('bday')).select_by_visible_text('17')
+        Select(wd.find_element_by_name('bmonth')).select_by_visible_text('March')
         wd.find_element_by_name("byear").click()
         wd.find_element_by_name("byear").clear()
         wd.find_element_by_name("byear").send_keys("1990")
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[1]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[1]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[15]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[15]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[7]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[7]").click()
+        Select(wd.find_element_by_name('aday')).select_by_visible_text('27')
+        Select(wd.find_element_by_name('amonth')).select_by_visible_text('September')
         wd.find_element_by_name("ayear").click()
         wd.find_element_by_name("ayear").clear()
         wd.find_element_by_name("ayear").send_keys("2000")
@@ -85,8 +87,8 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys("be prepared")
+        # submit contact creation
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
-        wd.find_element_by_link_text("Logout").click()
 
     def login(self, wd, username, password):
         wd.find_element_by_id("content").click()
