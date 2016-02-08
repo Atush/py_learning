@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8fc6c70-f1b1-4cb2-9ebc-ffd020710bc9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixture/group.py" afterPath="$PROJECT_DIR$/fixture/group.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_add_contact.py" afterPath="$PROJECT_DIR$/test/test_add_contact.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_add_group.py" afterPath="$PROJECT_DIR$/test/test_add_group.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_del_group.py" afterPath="$PROJECT_DIR$/test/test_del_group.py" />
     </list>
     <ignored path="py_learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +25,7 @@
     <SUITE FILE_PATH="coverage/py_learning$py_test_in_test_add_empty_group.coverage" NAME="py.test in test_add_empty_group Coverage Results" MODIFIED="1454795933716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/py_learning$py_test_in_test_add_contact_py__1_.coverage" NAME="py.test in test_add_contact.py (1) Coverage Results" MODIFIED="1454877370168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/py_learning$py_test_in_test_add_group_py.coverage" NAME="py.test in test_add_group.py Coverage Results" MODIFIED="1454795981850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/py_learning$py_test_in_test.coverage" NAME="py.test in test Coverage Results" MODIFIED="1454853558800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/py_learning$py_test_in_test.coverage" NAME="py.test in test Coverage Results" MODIFIED="1454942126683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/py_learning$py_test_in_test_add_contact.coverage" NAME="py.test in test_add_contact Coverage Results" MODIFIED="1454762254814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/py_learning$py_test_in_test_add_empty_contact.coverage" NAME="py.test in test_add_empty_contact Coverage Results" MODIFIED="1454870685972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/py_learning$py_test_in_test_add_contact_py.coverage" NAME="py.test in test_add_contact.py Coverage Results" MODIFIED="1454833365487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -41,10 +43,8 @@
         <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,11 +106,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_del_group.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_del_group.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_del_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4">
-              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conftest.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/conftest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -122,10 +132,8 @@
         <entry file="file://$PROJECT_DIR$/test/test_add_group.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,13 +160,15 @@
         <option value="$PROJECT_DIR$/application.py" />
         <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/fixture/session.py" />
-        <option value="$PROJECT_DIR$/test/test_add_group.py" />
-        <option value="$PROJECT_DIR$/test/test_add_contact.py" />
         <option value="$PROJECT_DIR$/fixture/contact.py" />
         <option value="$PROJECT_DIR$/fixture/manager.py" />
         <option value="$PROJECT_DIR$/fixture/application.py" />
         <option value="$PROJECT_DIR$/fixture/group.py" />
+        <option value="$PROJECT_DIR$/test/conftest.py" />
+        <option value="$PROJECT_DIR$/test/test_add_contact.py" />
+        <option value="$PROJECT_DIR$/test/test_add_group.py" />
         <option value="$PROJECT_DIR$/test/test_del_group.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
       </list>
     </option>
   </component>
@@ -271,12 +281,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/fixture" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in test_del_group.py">
+  <component name="RunManager" selected="Python tests.py.test in test">
     <configuration default="false" name="py.test in test" type="tests" factoryName="py.test" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -599,11 +610,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_del_group.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_add_group.py (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_add_contact.py (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_add_empty_contact" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_del_group.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_add_group.py (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_add_contact.py (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_add_empty_contact" />
       </list>
     </recent_temporary>
   </component>
@@ -621,11 +632,11 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_add_contact_py_(1) - 2016.02.07 at 23h 16m 46s.xml">
-      <configuration name="py.test in test_add_contact.py (1)" configurationId="tests" />
+    <history-entry file="py_test_in_test - 2016.02.08 at 17h 34m 22s.xml">
+      <configuration name="py.test in test" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_add_contact_py_(1) - 2016.02.07 at 23h 20m 43s.xml">
-      <configuration name="py.test in test_add_contact.py (1)" configurationId="tests" />
+    <history-entry file="py_test_in_test - 2016.02.08 at 17h 35m 34s.xml">
+      <configuration name="py.test in test" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_add_contact_py_(1) - 2016.02.07 at 23h 34m 22s.xml">
       <configuration name="py.test in test_add_contact.py (1)" configurationId="tests" />
@@ -739,16 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/application.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -777,16 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_add_group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -795,10 +786,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_add_contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_add_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_del_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
