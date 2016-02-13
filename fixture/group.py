@@ -34,7 +34,7 @@ class GroupHelper:
         wd.find_element_by_name("selected[]").click()
         # init editing
         wd.find_element_by_name("edit").click()
-        # fill group form
+        # edit group form
         if parameter == "name":
             element_name = "group_name"
         elif parameter == "header":
@@ -44,7 +44,7 @@ class GroupHelper:
         wd.find_element_by_name(element_name).click()
         wd.find_element_by_name(element_name).clear()
         wd.find_element_by_name(element_name).send_keys(new_value)
-        # submit group creation
+        # submit group edition
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
 
