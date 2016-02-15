@@ -14,36 +14,32 @@ class GroupHelper:
         # init group creation
         wd.find_element_by_name("new").click()
         # fill group form
-        wd.find_element_by_name("group_name").click()
-        wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys(group.name)
-        wd.find_element_by_name("group_header").click()
-        wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys(group.header)
-        wd.find_element_by_name("group_footer").click()
-        wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys(group.footer)
+        self.fill_group_form(group)
         # submit group creation
         wd.find_element_by_name("submit").click()
         self.return_to_groups_page()
 
-    # possible parameters: name, header, footer
-    def edit(self, parameter, new_value):
+    def fill_group_form(self, group):
+        wd = self.app.wd
+        self.type("group_name", group.name)
+        self.type("group_header", group.header)
+        self.type("group_footer", group.footer)
+
+    def type(self, group_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(group_name).click()
+            wd.find_element_by_name(group_name).clear()
+            wd.find_element_by_name(group_name).send_keys(text)
+
+
+    def edit(self, new_group_data):
         wd = self.app.wd
         self.open_groups_page()
-        wd.find_element_by_name("selected[]").click()
+        self.select_first_group()
         # init editing
         wd.find_element_by_name("edit").click()
-        # edit group form
-        if parameter == "name":
-            element_name = "group_name"
-        elif parameter == "header":
-            element_name = "group_header"
-        elif parameter == "footer":
-            element_name = "group_footer"
-        wd.find_element_by_name(element_name).click()
-        wd.find_element_by_name(element_name).clear()
-        wd.find_element_by_name(element_name).send_keys(new_value)
+        self.fill_group_form(new_group_data)
         # submit group edition
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
@@ -51,11 +47,15 @@ class GroupHelper:
     def delete_first_group(self):
         wd = self.app.wd
         self.open_groups_page()
-        # check first group
-        wd.find_element_by_name("selected[]").click()
+        self.select_first_group()
         # init deletion
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
+
+    def select_first_group(self):
+        wd = self.app.wd
+        # select first group
+        wd.find_element_by_name("selected[]").click()
 
     def open_groups_page(self):
         wd = self.app.wd
