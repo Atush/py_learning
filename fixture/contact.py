@@ -1,4 +1,3 @@
-from selenium.webdriver.support.ui import Select
 
 class ContactHelper:
 
@@ -55,6 +54,7 @@ class ContactHelper:
         self.fill_contact_form(new_contact_data)
         # saving changes
         wd.find_element_by_name("update").click()
+        wd.find_element_by_name("home").click()
 
 
     def delete_first_contact(self):
@@ -66,3 +66,9 @@ class ContactHelper:
         # init deletion
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
+
+    def count(self):
+        wd = self.app.wd
+        # open home page
+        wd.find_element_by_link_text("home").click()
+        return len(wd.find_elements_by_name("selected[]"))
