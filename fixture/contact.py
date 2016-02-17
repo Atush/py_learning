@@ -46,7 +46,6 @@ class ContactHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-    # possible parameters: firstname, middlename, lastname
     def edit(self, new_contact_data):
         wd = self.app.wd
         # init editing
@@ -54,21 +53,24 @@ class ContactHelper:
         self.fill_contact_form(new_contact_data)
         # saving changes
         wd.find_element_by_name("update").click()
-        wd.find_element_by_name("home").click()
+        self.open_home_page()
 
 
     def delete_first_contact(self):
         wd = self.app.wd
-        # open home page
-        wd.find_element_by_link_text("home").click()
+        self.open_home_page()
         # check first group
         wd.find_element_by_name("selected[]").click()
         # init deletion
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
 
+    def open_home_page(self):
+        wd = self.app.wd
+        if not wd.current_url.endswith("/index.php"):
+            wd.find_element_by_link_text("home").click()
+
     def count(self):
         wd = self.app.wd
-        # open home page
-        wd.find_element_by_link_text("home").click()
+        self.open_home_page()
         return len(wd.find_elements_by_name("selected[]"))
