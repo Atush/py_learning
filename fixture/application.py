@@ -6,7 +6,7 @@ class Application:
     def __init__(self):
         self.wd = WebDriver()
         self.open_home_page()
-        #self.wd.implicitly_wait(1)
+        #self.wd.implicitly_wait(4)
         self.manager = ManageHelper(self)
 
 

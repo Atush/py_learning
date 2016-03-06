@@ -1,3 +1,4 @@
+import time
 
 class ContactHelper:
 
@@ -41,6 +42,7 @@ class ContactHelper:
 
     def change_field_value(self, field_name, text):
         wd = self.app.wd
+        #time.sleep(1)
         if text is not None:
             wd.find_element_by_name(field_name).click()
             wd.find_element_by_name(field_name).clear()
@@ -48,8 +50,10 @@ class ContactHelper:
 
     def edit(self, new_contact_data):
         wd = self.app.wd
+        index = 2
         # init editing
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        #wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        wd.find_element_by_xpath("//*[@id='maintable']//tr[" + str(index) + "]/td[8]/a").click()
         self.fill_contact_form(new_contact_data)
         # saving changes
         wd.find_element_by_name("update").click()
