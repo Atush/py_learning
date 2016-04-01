@@ -19,29 +19,29 @@ class ContactHelper:
     def fill_contact_form(self, contact):
         wd = self.app.wd
         self.change_field_value("firstname", contact.firstname)
-        self.change_field_value("middlename", contact.middlename)
+        #self.change_field_value("middlename", contact.middlename)
         self.change_field_value("lastname", contact.lastname)
-        self.change_field_value("nickname", contact.nickname)
-        self.change_field_value("title", contact.title)
-        self.change_field_value("company", contact.company)
-        self.change_field_value("address", contact.address)
-        self.change_field_value("home", contact.homephone)
-        self.change_field_value("mobile", contact.mobile)
-        self.change_field_value("work", contact.workphone)
-        self.change_field_value("fax", contact.fax)
-        self.change_field_value("email", contact.email)
-        self.change_field_value("email2", contact.email2)
-        self.change_field_value("email3", contact.email3)
-        self.change_field_value("homepage", contact.homepage)
+        #self.change_field_value("nickname", contact.nickname)
+        #self.change_field_value("title", contact.title)
+        #self.change_field_value("company", contact.company)
+        #self.change_field_value("address", contact.address)
+        #self.change_field_value("home", contact.homephone)
+        #self.change_field_value("mobile", contact.mobile)
+        #self.change_field_value("work", contact.workphone)
+        #self.change_field_value("fax", contact.fax)
+        #self.change_field_value("email", contact.email)
+        #self.change_field_value("email2", contact.email2)
+        #self.change_field_value("email3", contact.email3)
+        #self.change_field_value("homepage", contact.homepage)
         #Select(wd.find_element_by_name('bday')).select_by_visible_text(contact.bday)
         #Select(wd.find_element_by_name('bmonth')).select_by_visible_text(contact.bmonth)
-        self.change_field_value("byear", contact.byear)
+        #self.change_field_value("byear", contact.byear)
         #Select(wd.find_element_by_name('aday')).select_by_visible_text(contact.aday)
         #Select(wd.find_element_by_name('amonth')).select_by_visible_text(contact.amonth)
-        self.change_field_value("ayear", contact.ayear)
-        self.change_field_value("address2", contact.address2)
-        self.change_field_value("phone2", contact.phone2)
-        self.change_field_value("notes", contact.notes)
+        #self.change_field_value("ayear", contact.ayear)
+        #self.change_field_value("address2", contact.address2)
+        #self.change_field_value("phone2", contact.phone2)
+        #self.change_field_value("notes", contact.notes)
 
     def change_field_value(self, field_name, text):
         wd = self.app.wd
@@ -67,6 +67,15 @@ class ContactHelper:
         wd.find_element_by_name("update").click()
         self.contact_cache = None
 
+
+    def edit_contact_by_id(self, id, new_contact_data):
+        wd = self.app.wd
+        #self.select_contact_by_id(id)
+        wd.find_element_by_xpath("//a[@href='edit.php?id=%s']" % id).click()
+        self.fill_contact_form(new_contact_data)
+        wd.find_element_by_name("update").click()
+        self.contact_cache = None
+
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
 
@@ -79,6 +88,20 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
         self.contact_cache = None
+
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        self.open_home_page()
+        # check index contact
+        self.select_contact_by_id(id)
+        # init deletion
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.switch_to_alert().accept()
+        self.contact_cache = None
+
+    def select_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
 
     def open_home_page(self):
         wd = self.app.wd
